@@ -1,10 +1,9 @@
 def turn_count(board)
-  count=0
-  index=0
-  while count<board.length
-    if board[index] != "" || board[index]!= " "
-      count+=1
+  counter = 0
+  board.each {|space|
+    if space == "X" || space == "O"
+      counter += 1
     end
-    index+=1
-  end
+  }
+  counter
 end
